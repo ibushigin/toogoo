@@ -14,15 +14,17 @@ items = client.get_items()
 #check if basket is available
 def ItemsAvailable():
     for i in items:
-        if i["items_available"] == 0:
+        if 0 == i["items_available"]:
             return "Il n'y a pas de panier disponible"
         else:
             list = []
             for i in items:
                 if i["items_available"] != 0:
+                    price = i["item"]["price_including_taxes"]["minor_units"]/100
                     item = {
                         "shop" : i["store"]["store_name"],
-                        "itemNumber" : i["items_available"]
+                        "itemNumber" : i["items_available"],
+                        "price" : str(price)+"€"
                     }
                     list.append(item)    
         return list
