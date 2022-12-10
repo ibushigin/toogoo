@@ -8,7 +8,7 @@ path = Path(pathToFile)
 if path.is_file():
     print("Token found")
 else:    
-    client = TgtgClient(email="jexn.lxlxnne@gmail.com")
+    client = TgtgClient(email="")
     credentials = client.get_credentials()
     print(credentials)
     with open("token.json", "w") as outfile:
