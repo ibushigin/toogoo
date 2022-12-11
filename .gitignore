@@ -1,2 +1,5 @@
 #Ignore token json
 token.json
+env.py
+__pycache__
+__pycache__/*
